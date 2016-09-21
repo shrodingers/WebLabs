@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Caroussel</title>
+    <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    <!-- From https://www.barbarianmeetscoding.com, in order to allow ES6 features -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        // set our baseURL reference path
+        System.config({
+            packages: {
+                js: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+            },
+            meta: {
+                // our modules have been transpiled to commonJS
+                'js/*': {format: 'cjs'}
+            }
+        });
+
+        System.import('build/calculator.js')
+            .then(null, console.error.bind(console));
+    </script>
+    <script type="text/javascript" src="build/calculator.js"></script>
+</head>
+<body>
+<h1>Instructions for Calculator</h1>
+
+<h2>Instructions</h2>
+
+<p>Instructions are available with the Instructions.md file, formatted with markdown, that can be opened with
+    gitHub or any markdown compliant viewer.
+    They are also available directly inside index.html page.</p>
+
+<h2>General Behavior</h2>
+
+<p>This calculator can be constructed with a number to set the base value, or none to set it to 0;
+    Then, it keeps an internal value, that can be modified through different calculus methods.
+    Calculus and save methods can be chained, <code>getResult</code> and <code>recover</code> methods cannot, because they allow to access
+    values stored inside the calculator  </p>
+
+<h2>Methods</h2>
+
+<ul>
+    <li><p>add : Adds a number to the calculator's value
+        Example :
+        <code>Calculator.add(42);</code></p></li>
+    <li><p>sub : Substracts a number to the calculator's value
+        Example :
+        <code>Calculator.sub(42);</code></p></li>
+    <li><p>mul : Divides the calculator's value by a number
+        Example :
+        <code>Calculator.mul(42);</code></p></li>
+    <li><p>div : Divides the calculator's value by a number
+        Example :
+        <code>Calculator.div(42);</code></p></li>
+    <li><p>sin : Computes the calculator's value sinus
+        Example :
+        <code>Calculator.sin();</code></p></li>
+    <li><p>cos : Computes the calculator's value cosinus
+        Example :
+        <code>Calculator.cos();</code></p></li>
+    <li><p>tan : Computes the calculator's value tangent
+        Example :
+        <code>Calculator.tan();</code></p></li>
+    <li><p>fact : Computes the calculator's value factorial
+        Example :
+        <code>Calculator.fact();</code></p></li>
+    <li><p>save : Saves the current calculator's value
+        Example :
+        <code>Calculator.save();</code></p></li>
+    <li><p>recover : Returns the last previously saved value
+        Example :
+        <code>Calculator.recover();</code></p></li>
+    <li><p>getResult : Returns the calculator's current value
+        Example :
+        <code>Calculator.getResult();</code></p></li>
+    <li><p>resetResult : Reset the calculator's value to 0
+        Example :
+        <code>Calculator.resetResult();</code></p></li>
+</ul>
+</body>
+</html>

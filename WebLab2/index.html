@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Caroussel</title>
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+    <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    <!-- From https://www.barbarianmeetscoding.com, in order to allow ES6 features -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script>
+        // set our baseURL reference path
+        System.config({
+            packages: {
+                js: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+            },
+            meta: {
+                // our modules have been transpiled to commonJS
+                'js/*': {format: 'cjs'}
+            }
+        });
+
+        System.import('build/index.js')
+            .then(null, console.error.bind(console));
+    </script>
+    <script type="text/javascript" src="build/index.js"></script>
+</head>
+<body>
+    <div class="full flex-center">
+        <div class="grey-back flex-spaces" id="caroussel">
+           <i class="fa fa-chevron-left clickable fa-3x lightgrey-text" id="left-button"></i>
+            <div class="align-bottom" id="index-container">
+
+            </div>
+            <i class="fa fa-chevron-right clickable fa-3x lightgrey-text" id="right-button"></i>
+        </div>
+    </div>
+</body>
+</html>

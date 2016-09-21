@@ -1,0 +1,49 @@
+.full {
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey_back {
+    background-color: lightgray;
+}
+
+.flex-spaces {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    text-shadow:1px 1px 2px gray;
+}
+
+.lightgrey-text {
+    color: lightgray;
+}
+
+#caroussel {
+    transition: background-image 0.5s linear;
+    background-size:cover;
+}
+
+.align-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#index-container {
+    align-self: flex-end;
+    width: 50%;
+    margin-bottom: 10%;
+}
