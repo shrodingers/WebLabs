@@ -205,6 +205,7 @@ $(function() {
                 if (!isStarted) {
                     isStarted = true;
                     current = '0';
+                    display.text('0');
                 }
                 if (current === '') {
                     ErrorDisplay("Erreur logique : Impossible de mettre 2 opérations à la suite");
@@ -256,12 +257,12 @@ $(function() {
             ErrorDisplay("Erreur logique : Opérations imbriquées impossibles : fermez la parenthèse");
             return;
         }
-        if (!lastCommand) {
+        /*if (!lastCommand) {
             clearAll();
             display.text('0');
             return;
-        }
-        lastCommand.bind(calculator, current)();
+        }*/
+        lastCommand ? lastCommand.bind(calculator, current)(): calculator.value(current);
         display.text(calculator.equals());
         clearAll();
     });

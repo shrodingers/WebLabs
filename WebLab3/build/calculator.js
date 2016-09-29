@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -20,53 +20,53 @@ var Calculator = function () {
     }
 
     _createClass(Calculator, [{
-        key: 'add',
+        key: "add",
         value: function add(number) {
             this.result += number;
             return this;
         }
     }, {
-        key: 'sub',
+        key: "sub",
         value: function sub(number) {
             this.result -= number;
             return this;
         }
     }, {
-        key: 'mul',
+        key: "mul",
         value: function mul(number) {
             this.result *= number;
             return this;
         }
     }, {
-        key: 'div',
+        key: "div",
         value: function div(number) {
+            if (number === 0) throw new RangeError("Division by zero results in an infinite result, you don't wanna see this...");
             this.result /= number;
             return this;
         }
     }, {
-        key: 'sin',
+        key: "sin",
         value: function sin() {
             this.result = Math.sin(this.result);
             return this;
         }
     }, {
-        key: 'cos',
+        key: "cos",
         value: function cos() {
             this.result = Math.cos(this.result);
             return this;
         }
     }, {
-        key: 'tan',
+        key: "tan",
         value: function tan() {
             this.result = Math.tan(this.result);
             return this;
         }
     }, {
-        key: 'fact',
+        key: "fact",
         value: function fact() {
             var factorial = function factorial(n) {
-                if (n === 0) return 1;
-                return n * factorial(n - 1);
+                return n === 0 ? 1 : n * factorial(n - 1);
             };
             if (this.result < 0) {
                 throw new RangeError('cannot make a factorial on negative number');
@@ -75,23 +75,23 @@ var Calculator = function () {
             return this;
         }
     }, {
-        key: 'save',
+        key: "save",
         value: function save() {
             this.saved = this.result;
             return this;
         }
     }, {
-        key: 'recover',
+        key: "recover",
         value: function recover() {
             return this.saved;
         }
     }, {
-        key: 'getResult',
+        key: "getResult",
         value: function getResult() {
             return this.result;
         }
     }, {
-        key: 'resetResult',
+        key: "resetResult",
         value: function resetResult() {
             this.result = 0;
             return this;

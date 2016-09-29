@@ -27,6 +27,8 @@ class Calculator {
     }
 
     div(number) {
+        if (number === 0)
+            throw new RangeError("Division by zero results in an infinite result, you don't wanna see this...");
         this.result /= number;
         return this;
     }
