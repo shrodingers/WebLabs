@@ -18,6 +18,8 @@ Math.factorial = function(n) {
 // calculator.add(2).add(3).subtract(2).equals()
 // Retourne : 2
 // 2 + 3 - 2 = 2
+
+
 var Calculator = function () {
     this.memory;
 
@@ -141,6 +143,20 @@ const ErrorDisplay = function(error) {
     }, 500);
 }
 
+function getLocation() {
+    // fonction de geolocalisation
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert ("Geolocation is not supported by this browser.");
+    }
+}
+function showPosition(position) {
+    alert( "Latitude: " + position.coords.latitude +
+        " Longitude: " + position.coords.longitude );
+}
+
+
 $(function() {
     const calculator = new Calculator();
     var insideExp = false;
@@ -171,17 +187,7 @@ $(function() {
         calculator.clear();
     };
     const display = $('#display');
-    // geoloc function / not tested yet
-    const geoloc = function () {
-        if (!navigator.geolocation) {
-            console.error('Geolocation is missing');
-            return;
-        }
-        clearAll();
-        navigator.geolocation.getCurrentPosition(function(position) {
-            display.text(position.coords.latitude+ ',' + position.coords.longitude);
-        });
-    };
+
     // set all numbers buttons
     $('.button-container button').each(function () {
         var numberText = $(this).text() === 'MemGet' ? calculator.getMemory() : (this.text);
@@ -258,15 +264,12 @@ $(function() {
             return;
         }
         /*if (!lastCommand) {
-            clearAll();
-            display.text('0');
-            return;
-        }*/
+         clearAll();
+         display.text('0');
+         return;
+         }*/
         lastCommand ? lastCommand.bind(calculator, current)(): calculator.value(current);
         display.text(calculator.equals());
         clearAll();
     });
-
-
-
 });
