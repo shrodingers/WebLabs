@@ -130,7 +130,12 @@ const Evaluator = function() {
     this.calculatorStack = [new Calculator()];
 }
 
+var isError;
+
 const ErrorDisplay = function(error) {
+    if (isError)
+        return;
+    isError = true;
     const div = $('#display');
     const expr = div.text();
     div.text(error);
@@ -138,6 +143,7 @@ const ErrorDisplay = function(error) {
     setTimeout(function() {
         div.text(expr);
         div.removeClass('red-text');
+        isError = false;
     }, 500);
 }
 
@@ -174,7 +180,7 @@ $(function() {
     // geoloc function / not tested yet
     const geoloc = function () {
         if (!navigator.geolocation) {
-            console.error('Geolocation is missing');
+            console.error('Geolocation is not supported by this browser.');
             return;
         }
         clearAll();
@@ -266,7 +272,24 @@ $(function() {
         display.text(calculator.equals());
         clearAll();
     });
-
-
+    $('#location').click(geoloc);
+    $('#MemSet').click(function() {
+        if (insideExp) {
+            ErrorDisplay("Erreur logique : Opérations imbriquées impossibles : fermez la parenthèse");
+            return;
+        }
+        var newCalc = Object.assign({}, calculator);
+        lastCommand ? lastCommand.bind(newCalc, current)() : calculator.value(current);
+        calculator.setMemory(newCalc.equals());
+    });
+    $('#MemGet').click(function() {
+        if (operandRequired) {
+            ErrorDisplay("Erreur de syntaxe : Operation nécessaire après une fonction");
+            return;
+        }
+        current += calculator.getMemory();
+        !isStarted || display.text() === '0' ? isStarted = !isStarted && display.text(current)
+            : display.text(display.text() + current);
+    });
 
 });
