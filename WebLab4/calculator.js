@@ -285,7 +285,8 @@ $(function() {
          return;
          }*/
         lastCommand ? lastCommand.bind(calculator, current)(): calculator.value(current);
-        display.text(calculator.equals());
+        var res = calculator.equals();
+        display.text(isNaN(res) ? '0' : res);
         clearAll();
     });
     $('#location').click(geoloc);
@@ -295,7 +296,7 @@ $(function() {
             return;
         }
         var newCalc = Object.assign({}, calculator);
-        lastCommand ? lastCommand.bind(newCalc, current)() : calculator.value(current);
+        lastCommand ? lastCommand.bind(newCalc, current)() : newCalc.value(current);
         calculator.setMemory(newCalc.equals());
     });
     $('#MemGet').click(function() {
@@ -303,9 +304,15 @@ $(function() {
             ErrorDisplay("Erreur de syntaxe : Operation nécessaire après une fonction");
             return;
         }
-        current += calculator.getMemory();
-        !isStarted || display.text() === '0' ? isStarted = !isStarted && display.text(current)
-            : display.text(display.text() + current);
+        const memory = calculator.getMemory();
+        if (!memory)
+            return;
+        current += memory;
+        !isStarted || display.text() === '0' ? isStarted = !isStarted && display.text(memory)
+            : display.text(display.text() + memory);
     });
-
+    $('#reset').click(function() {
+        clearAll();
+        display.text('0');
+    });
 });
