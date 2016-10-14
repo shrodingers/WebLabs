@@ -19,7 +19,62 @@
     <favorites_list name="WebLab4" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="calculator.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/calculator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.8544018">
+              <caret line="273" column="31" selection-start-line="273" selection-start-column="31" selection-end-line="273" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-29.5">
+              <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+              <folding>
+                <marker date="1475362313276" expanded="true" signature="31:1725" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="38:482" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="489:1717" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="508:1710" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="538:1710" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="577:649" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="688:908" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="947:1137" placeholder="..." />
+                <marker date="1475362313276" expanded="true" signature="1642:1709" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../webLab1/src/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="90" column="27" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 3c45ad7f2eb2408ed974a6d92ca6291c5c3b04b8
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,8 +100,13 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
+<<<<<<< HEAD
     <option name="width" value="1378" />
     <option name="height" value="735" />
+=======
+    <option name="width" value="1932" />
+    <option name="height" value="1047" />
+>>>>>>> 3c45ad7f2eb2408ed974a6d92ca6291c5c3b04b8
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -83,7 +143,11 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="F:/UMovie_front" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../umovie" />
+>>>>>>> 3c45ad7f2eb2408ed974a6d92ca6291c5c3b04b8
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editor.config.accepted" value="true" />
@@ -166,10 +230,17 @@
     <option name="totallyTimeSpent" value="1663000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12481645" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973601" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 3c45ad7f2eb2408ed974a6d92ca6291c5c3b04b8
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -324,8 +395,13 @@
     </entry>
     <entry file="file://$USER_HOME$/WebLabs/WebLab4/calculator.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="411">
           <caret line="204" column="11" selection-start-line="194" selection-start-column="4" selection-end-line="204" selection-end-column="11" />
+=======
+        <state vertical-scroll-proportion="1.8544018">
+          <caret line="273" column="31" selection-start-line="273" selection-start-column="31" selection-end-line="273" selection-end-column="31" />
+>>>>>>> 3c45ad7f2eb2408ed974a6d92ca6291c5c3b04b8
           <folding />
         </state>
       </provider>
