@@ -1,0 +1,59 @@
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-col-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-background {
+    background-color: deepskyblue;
+}
+
+.scale {
+    flex-grow: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.huge-text {
+    font-size: xx-large;
+}
+.padding-between {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.red-font {
+    color: orangered;
+    font-weight: bold;
+}
+
+.white-font {
+    color: white;
+    font-weight: bold;
+}
+
+.lucida {
+    font-family: "Lucida Console", Lucida, sans-serif;
+}
+
+.margin-10p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.width-6 {
+    width: 6%;
+}
