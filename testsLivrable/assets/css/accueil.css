@@ -1,0 +1,39 @@
+.accueil {
+    background-color: #293243;
+}
+
+.head {
+    background-size: cover;
+    height: 100%;
+    background: #000 url("https://theregularmoviegoer.files.wordpress.com/2013/10/cinema.jpg");
+}
+
+.head h3 {
+    color: #FA4219;
+    font-size: 35px;
+    padding: 20px;
+    margin: 0;
+}
+
+.sign-in {
+    color: #fff;
+    padding: 70px 100px;
+}
+
+.sign-in .btn {
+    width: 150px;
+    color: #FA4219;
+    border: none;
+    border-radius: 0;
+}
+
+.sign-in .btn:hover {
+    background-color: #FA4219;
+    color: #fff;
+}
+
+.footer {
+    color: #ccc;
+    position: absolute;
+    bottom: 0px;
+}

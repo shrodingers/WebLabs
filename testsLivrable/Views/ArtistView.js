@@ -18,6 +18,8 @@ ArtistView = Backbone.View.extend({
     },
 
     render: function(){
-        this.$el.html(this.template({artists : this.collection}));
+        if (!this.collection.length)
+            return;
+        this.$el.html(this.template({artist : this.collection.models[0]}));
     },
 });

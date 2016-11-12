@@ -7,7 +7,7 @@
 //
 
 MoviesList = Backbone.View.extend({
-    template : _.template($("#movies_artist").html()),
+    template : _.template($("#movies_list").html()),
 
     initialize: function(){
         _.bindAll(this, 'render');

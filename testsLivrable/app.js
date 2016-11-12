@@ -18,7 +18,7 @@ $(function() {
         },
         success: function(authData) {
             var searchRes = new ArtistSearch({}, {
-                name: 'Thomas Brodie-Sangster'
+                name: 'David Tennant'
             });
             var auth = function (xhr) {
                 var token = authData.token;
@@ -26,23 +26,24 @@ $(function() {
             };
             searchRes.fetch({
                 beforeSend: auth,
-            }).complete(function () {
-                searchRes.each(function (model) {
+            }).then(function () {
+                searchRes.each(function (model, index) {
+                    if (index > 1)
+                        return;
                     var save = model;
                     model.set({
                         authFn: auth,
                     })
                     model.fetch({
                         beforeSend: auth,
-                    }).complete(function () {
+                    }).then(function () {
                         var movies = new ArtistMovies({}, {
                             id: model.id,
                         });
-                        const divId = 'movies_of' + model.get('artistId');
-                        $("#movies").append("<div id=" + divId + "></div>")
+
                         var moviesList = new MoviesList({
                             collection: movies,
-                            el: '#' + divId,
+                            el: '#list_movies',
                         });
                         movies.fetch({
                             beforeSend: auth
@@ -52,7 +53,7 @@ $(function() {
             });
             var view = new ArtistView({
                 collection: searchRes,
-                el: '#start',
+                el: '#actor_infos',
             });
         }
     });
