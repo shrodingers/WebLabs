@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>chat</title>
-
-
-</head>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
     <style>
         #chat{
             height: 400px;
         }
 
     </style>
+</head>
 <body>
 
     <div id="nameContainer">
@@ -35,51 +36,7 @@
 
 
 
-    <script src=https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        jQuery(function ($) {
-            var socket=io.connect();
-            var $nameForm= $('#setName');
-            var $nameBox = $('#name');
-            var $user =$('#user')
-            var $messageForm = $('#send-message');
-            var $messageBox= $('#message');
-            var $chat = $('#chat');
 
-
-            $nameForm.submit(function (e) {
-                e.preventDefault();
-                socket.emit('new user',$nameBox.val(),function (data) {
-                    if(data){
-                        $('#nameContainer').hide();
-                        $('#contentWrap').show();
-                    }
-                });
-                $nameBox.val();
-            });
-
-            socket.on('usernames',function (data) {
-                var html='';
-                for(i=0;i<data.length;i++){
-                    html+=data[i]+ '</br>'
-                }
-                $user.html(html);
-            });
-
-
-
-            $messageForm.submit(function (e){
-                e.preventDefault();
-                socket.emit('send message',$messageBox.val());
-                $messageBox.val('');
-            });
-            socket.on('new  message',function (data) {
-                $chat.append(data+ "<br/>");
-            });
-
-        });
-    </script>
 
 </body>
 </html>
