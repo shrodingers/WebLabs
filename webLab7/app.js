@@ -27,8 +27,8 @@ function init(callback) {
                     },
                     success: function (parsed_data) {
                         console.log(parsed_data);
-                        callback('http://api.wunderground.com/api/1abe5e6d7312c213/forecast/q/zmw:' + parsed_data.RESULTS[0].zmw + '.json',
-                            'http://api.wunderground.com/api/1abe5e6d7312c213/forecast10day/q/zmw:' + parsed_data.RESULTS[0].zmw + '.json',
+                        callback('http://api.wunderground.com/api/090fcbb662052cb7/forecast/q/zmw:' + parsed_data.RESULTS[0].zmw + '.json',
+                            'http://api.wunderground.com/api/090fcbb662052cb7/forecast10day/q/zmw:' + parsed_data.RESULTS[0].zmw + '.json',
                             parsed_data.RESULTS[0]);
                     },
                 }).fail(function (jqXHR) {
@@ -43,8 +43,8 @@ function init(callback) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getPosition);
         } else {
-            callback("http://api.wunderground.com/api/1abe5e6d7312c213/forecast/q/CA/San_Francisco.json",
-                "http://api.wunderground.com/api/1abe5e6d7312c213/forecast10day/q/CA/San_Francisco.json",
+            callback("http://api.wunderground.com/api/090fcbb662052cb7/forecast/q/CA/San_Francisco.json",
+                "http://api.wunderground.com/api/090fcbb662052cb7/forecast10day/q/CA/San_Francisco.json",
                 {
                     "name": "San Francisco, California",
                     "type": "city",
